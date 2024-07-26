@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".PaymentSelectionActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/paymentMethodTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seleccione método de pago"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
+
+        <RadioGroup
+            android:id="@+id/paymentMethodRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/paymentMethodTextView"
+            android:layout_marginTop="16dp">
+
+            <RadioButton
+                android:id="@+id/radioPayPal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PayPal"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radioCreditCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tarjeta de crédito o débito"/>
+        </RadioGroup>
+
+        <!-- Detalles del usuario y de la tarjeta -->
+        <EditText
+            android:id="@+id/firstNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombres"
+            android:layout_below="@id/paymentMethodRadioGroup"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/lastNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apellidos"
+            android:layout_below="@id/firstNameEditText"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/addressEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dirección de entrega"
+            android:layout_below="@id/lastNameEditText"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/cardNumberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número de tarjeta"
+            android:layout_below="@id/addressEditText"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/expiryDateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de vencimiento (MM/AA)"
+            android:layout_below="@id/cardNumberEditText"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/cvvEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CVV"
+            android:layout_below="@id/expiryDateEditText"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/confirmPaymentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirmar"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/cvvEditText"
+            android:layout_marginTop="24dp"/>
+    </RelativeLayout>
+
+</ScrollView>
