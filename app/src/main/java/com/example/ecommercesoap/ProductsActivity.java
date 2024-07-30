@@ -215,7 +215,7 @@ public class ProductsActivity extends AppCompatActivity {
     }
 
     private void updateCartItemCount() {
-        Call<List<CartItem>> call = apiService.getCart(1); // Pasar el userId (en este caso, 1 como ejemplo)
+        Call<List<CartItem>> call = apiService.getCart(13); // Pasar el userId (en este caso, 1 como ejemplo)
         call.enqueue(new Callback<List<CartItem>>() {
             @Override
             public void onResponse(Call<List<CartItem>> call, Response<List<CartItem>> response) {

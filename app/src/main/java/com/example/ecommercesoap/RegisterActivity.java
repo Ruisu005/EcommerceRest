@@ -73,10 +73,10 @@ public class RegisterActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     ApiResponse apiResponse = response.body();
                     if (apiResponse != null && "success".equals(apiResponse.getStatus())) {
-                        Toast.makeText(RegisterActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
                         // Aquí puedes iniciar una nueva actividad para el inicio de sesión o la aplicación principal
                     } else {
-                        Toast.makeText(RegisterActivity.this, "Registration failed: " + apiResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, "Registro fallido: " + apiResponse.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     Toast.makeText(RegisterActivity.this, "Response error: " + response.message(), Toast.LENGTH_SHORT).show();
@@ -86,7 +86,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<ApiResponse> call, Throwable t) {
                 Log.e(TAG, "Failure: " + t.getMessage());
-                Toast.makeText(RegisterActivity.this, "Registration failed: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this, "Registro fallido: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

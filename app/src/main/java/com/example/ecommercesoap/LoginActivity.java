@@ -66,22 +66,22 @@ public class LoginActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     ApiResponse apiResponse = response.body();
                     if (apiResponse != null && "success".equals(apiResponse.getStatus())) {
-                        Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "Inicio de sesión exitosa", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(LoginActivity.this, CategoriesActivity.class);
                         startActivity(intent);
                         finish();
                     } else {
-                        Toast.makeText(LoginActivity.this, "Login failed: " + apiResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "Error de inicio de sesion: " + apiResponse.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    Toast.makeText(LoginActivity.this, "Response error: " + response.message(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Error de respuesta: " + response.message(), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ApiResponse> call, Throwable t) {
                 Log.e(TAG, "Failure: " + t.getMessage());
-                Toast.makeText(LoginActivity.this, "Login failed: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Error de inicio de sesion: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

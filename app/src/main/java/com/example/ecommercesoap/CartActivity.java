@@ -83,7 +83,7 @@ public class CartActivity extends AppCompatActivity {
     }
 
     private void loadCartItems() {
-        Call<List<CartItem>> call = apiService.getCart(1);
+        Call<List<CartItem>> call = apiService.getCart(13);
         call.enqueue(new Callback<List<CartItem>>() {
             @Override
             public void onResponse(Call<List<CartItem>> call, Response<List<CartItem>> response) {
