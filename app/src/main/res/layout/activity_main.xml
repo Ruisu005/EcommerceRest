@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundColor"
+    android:background="@drawable/vertical_background"
     android:gravity="center_vertical"
     tools:context=".MainActivity">
 
@@ -15,6 +15,7 @@
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
+        android:background="#00FFFFFF"
         android:src="@drawable/logo" />
 
     <Button
@@ -23,7 +24,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/btn_primary"
         android:text="Iniciar Sesion"
-        android:textColor="@color/textColorPrimary"
+        android:textColor="@color/accentColor"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/logoImageView"
         android:layout_marginTop="50dp"/>
@@ -34,7 +35,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/btn_accent"
         android:text="Registrarse"
-        android:textColor="@color/textColorPrimary"
+        android:textColor="@color/accentColor"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/loginButton"
         android:layout_marginTop="20dp"/>

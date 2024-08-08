@@ -1,18 +1,13 @@
 package com.example.ecommercesoap;
 
-import static android.content.ContentValues.TAG;
-
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -20,11 +15,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.squareup.picasso.Picasso;
-
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -57,7 +49,7 @@ public class CartActivity extends AppCompatActivity {
         payButton = findViewById(R.id.payButton);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2/ecommerce-api/")
+                .baseUrl("https://www.vendemoscomputadoras.com/ecommerce-api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -83,7 +75,7 @@ public class CartActivity extends AppCompatActivity {
     }
 
     private void loadCartItems() {
-        Call<List<CartItem>> call = apiService.getCart(13);
+        Call<List<CartItem>> call = apiService.getCart(1);
         call.enqueue(new Callback<List<CartItem>>() {
             @Override
             public void onResponse(Call<List<CartItem>> call, Response<List<CartItem>> response) {
@@ -120,7 +112,7 @@ public class CartActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     ApiResponse apiResponse = response.body();
                     if (apiResponse != null && apiResponse.getStatus().equals("success")) {
-                        Toast.makeText(CartActivity.this, "Cart cleared", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CartActivity.this, "Carrito vaciado", Toast.LENGTH_SHORT).show();
                         loadCartItems();
                     } else {
                         Toast.makeText(CartActivity.this, "Failed to clear cart", Toast.LENGTH_SHORT).show();
@@ -156,7 +148,7 @@ public class CartActivity extends AppCompatActivity {
             CartItem cartItem = cartItems.get(position);
             holder.productNameTextView.setText(cartItem.getName());
             holder.productPriceTextView.setText("$" + cartItem.getPrice());
-            holder.productQuantityTextView.setText("Quantity: " + cartItem.getQuantity());
+            holder.productQuantityTextView.setText("Cantidad: " + cartItem.getQuantity());
             holder.subtotalTextView.setText("Subtotal: $" + (cartItem.getPrice() * cartItem.getQuantity()));
             Picasso.get().load(cartItem.getImage()).into(holder.productImageView); // Cargar la imagen del producto
         }

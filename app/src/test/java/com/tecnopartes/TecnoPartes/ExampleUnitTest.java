@@ -1,4 +1,4 @@
-package com.example.ecommercesoap;
+package com.tecnopartes.TecnoPartes;
 
 import org.junit.Test;
 

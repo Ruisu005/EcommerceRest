@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundColor"
+    android:background="@drawable/background_categ"
     tools:context=".CategoriesActivity">
 
     <include layout="@layout/cart_icon" />
@@ -16,15 +16,17 @@
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:background="#00FFFFFF"
         android:src="@drawable/logo" />
 
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:queryHint="Search products"
         android:layout_below="@id/logoImageView"
-        android:layout_margin="16dp"/>
+        android:layout_margin="16dp"
+        android:background="#00B3E5FC"
+        android:queryHint="Buscar productos..." />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -32,7 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/searchView"
         android:layout_marginTop="20dp"
+        android:background="#00FFFFFF"
         android:padding="16dp"
-        android:scrollbars="vertical"/>
+        android:scrollbars="vertical" />
 
 </RelativeLayout>

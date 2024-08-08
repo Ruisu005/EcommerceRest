@@ -3,17 +3,13 @@ package com.example.ecommercesoap;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -21,11 +17,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.squareup.picasso.Picasso;
-
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -34,7 +27,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ProductsActivity extends AppCompatActivity {
 
-    private static final String BASE_URL = "http://10.0.2.2/ecommerce-api/";
+    private static final String BASE_URL = "https://www.vendemoscomputadoras.com/ecommerce-api/";
     private static final String TAG = "ProductsActivity";
     private ApiService apiService;
     private RecyclerView recyclerView;
@@ -215,7 +208,7 @@ public class ProductsActivity extends AppCompatActivity {
     }
 
     private void updateCartItemCount() {
-        Call<List<CartItem>> call = apiService.getCart(13); // Pasar el userId (en este caso, 1 como ejemplo)
+        Call<List<CartItem>> call = apiService.getCart(1); // Pasar el userId (en este caso, 1 como ejemplo)
         call.enqueue(new Callback<List<CartItem>>() {
             @Override
             public void onResponse(Call<List<CartItem>> call, Response<List<CartItem>> response) {

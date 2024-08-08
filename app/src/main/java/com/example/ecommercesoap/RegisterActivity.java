@@ -6,13 +6,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -21,7 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private static final String BASE_URL = "http://10.0.2.2/ecommerce-api/";
+    private static final String BASE_URL = "https://www.vendemoscomputadoras.com/ecommerce-api/";
     private static final String TAG = "RegisterActivity";
     private ApiService apiService;
 

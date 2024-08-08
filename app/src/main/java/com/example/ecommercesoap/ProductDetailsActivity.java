@@ -8,17 +8,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
 import com.squareup.picasso.Picasso;
-
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -27,7 +23,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ProductDetailsActivity extends AppCompatActivity {
 
-    private static final String BASE_URL = "http://10.0.2.2/ecommerce-api/";
+    private static final String BASE_URL = "https://www.vendemoscomputadoras.com/ecommerce-api/";
     private static final String TAG = "ProductDetailsActivity";
     private ApiService apiService;
     private int productId;
@@ -56,7 +52,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
             return insets;
         });
 
-        productId = getIntent().getIntExtra("product_id", 0);
+        productId = getIntent().getIntExtra("product_id", 1);
 
         productImageView = findViewById(R.id.productImageView);
         productNameTextView = findViewById(R.id.productNameTextView);
@@ -173,7 +169,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     ApiResponse apiResponse = response.body();
                     if (apiResponse != null && apiResponse.getStatus().equals("success")) {
-                        Toast.makeText(ProductDetailsActivity.this, "Product added to cart", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ProductDetailsActivity.this, "Producto añadido al carrito", Toast.LENGTH_SHORT).show();
                         updateCartItemCount();
                     } else {
                         String errorMessage = apiResponse != null ? apiResponse.getMessage() : "Unknown error";

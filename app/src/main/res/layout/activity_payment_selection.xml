@@ -6,42 +6,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="@drawable/background_payment"
     tools:context=".PaymentSelectionActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
         android:padding="16dp">
 
         <TextView
             android:id="@+id/paymentMethodTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#00FFFFFF"
             android:text="Seleccione método de pago"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_centerHorizontal="true"/>
+            android:textColor="@color/accentColor"/>
 
         <RadioGroup
             android:id="@+id/paymentMethodRadioGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_below="@id/paymentMethodTextView"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:background="#00FFFFFF"
+            android:orientation="vertical">
 
             <RadioButton
                 android:id="@+id/radioPayPal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="PayPal"
-                android:checked="true"/>
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/primaryDarkColor"/>
 
             <RadioButton
                 android:id="@+id/radioCreditCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tarjeta de crédito o débito"/>
+                android:text="Tarjeta de crédito o débito"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/primaryDarkColor"/>
         </RadioGroup>
 
         <!-- Detalles del usuario y de la tarjeta -->
@@ -49,58 +60,77 @@
             android:id="@+id/firstNameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombres"
             android:layout_below="@id/paymentMethodRadioGroup"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:hint="Nombres"
+            android:textSize="20dp"
+            android:textColorHint="@color/primaryDarkColor"
+            android:backgroundTint="@color/primaryDarkColor"/>
 
         <EditText
             android:id="@+id/lastNameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Apellidos"
             android:layout_below="@id/firstNameEditText"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:hint="Apellidos"
+            android:textSize="20dp"
+            android:textColorHint="@color/primaryDarkColor"
+            android:backgroundTint="@color/primaryDarkColor"/>
 
         <EditText
             android:id="@+id/addressEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Dirección de entrega"
             android:layout_below="@id/lastNameEditText"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:hint="Direccion de entrega"
+            android:textSize="20dp"
+            android:textColorHint="@color/primaryDarkColor"
+            android:backgroundTint="@color/primaryDarkColor"/>
 
         <EditText
             android:id="@+id/cardNumberEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Número de tarjeta"
             android:layout_below="@id/addressEditText"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:hint="Numero de tarjeta"
+            android:textSize="20dp"
+            android:textColorHint="@color/primaryDarkColor"
+            android:backgroundTint="@color/primaryDarkColor"/>
 
         <EditText
             android:id="@+id/expiryDateEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Fecha de vencimiento (MM/AA)"
             android:layout_below="@id/cardNumberEditText"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:hint="Fecha de vencimiento (MM/AA)"
+            android:textSize="20dp"
+            android:textColorHint="@color/primaryDarkColor"
+            android:backgroundTint="@color/primaryDarkColor"/>
 
         <EditText
             android:id="@+id/cvvEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="CVV"
             android:layout_below="@id/expiryDateEditText"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:hint="CVV"
+            android:textSize="20dp"
+            android:textColorHint="@color/primaryDarkColor"
+            android:backgroundTint="@color/primaryDarkColor"/>
 
         <Button
             android:id="@+id/confirmPaymentButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Confirmar"
-            android:layout_centerHorizontal="true"
             android:layout_below="@id/cvvEditText"
-            android:layout_marginTop="24dp"/>
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="Confirmar"
+            android:textColor="@color/accentColor"/>
     </RelativeLayout>
 
 </ScrollView>

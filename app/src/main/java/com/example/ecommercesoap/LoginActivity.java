@@ -22,7 +22,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private static final String BASE_URL = "http://10.0.2.2/ecommerce-api/";
+    private static final String BASE_URL = "https://www.vendemoscomputadoras.com/ecommerce-api/";
     private static final String TAG = "LoginActivity";
     private ApiService apiService;
 

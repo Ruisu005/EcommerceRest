@@ -5,19 +5,18 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundColor"
+    android:background="@drawable/background_prod"
     tools:context=".ProductDetailsActivity">
-
 
     <ImageView
         android:id="@+id/cartButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/ic_shopping_cart"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_margin="16dp" />
-
+        android:layout_margin="16dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/ic_shopping_cart" />
 
     <TextView
         android:id="@+id/cartItemCount"
@@ -37,99 +36,108 @@
         android:id="@+id/productImageView"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
         android:layout_margin="16dp"
-        android:layout_alignParentTop="true" />
+        android:background="#00FFFFFF"
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/productNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textColor="@color/primaryColor"
         android:layout_below="@id/productImageView"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#00FFFFFF"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/productCategoryTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="@color/primaryColor"
         android:layout_below="@id/productNameTextView"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="#00FFFFFF"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/productPriceTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="@color/accentColor"
         android:layout_below="@id/productCategoryTextView"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="#00FFFFFF"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/productDescriptionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
         android:layout_below="@id/productPriceTextView"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="#00FFFFFF"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/addToCartButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/btn_accent"
-        android:text="Add to Cart"
-        android:textColor="@color/textColorPrimary"
+        android:text="Añadir al carrito"
+        android:textColor="@color/accentColor"
         android:layout_below="@id/productDescriptionTextView"
         android:layout_margin="16dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
         android:layout_below="@id/addToCartButton"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:layout_centerHorizontal="true">
+        android:background="@color/primaryDarkColor"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/decreaseQuantityButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="-"
-            android:textSize="20sp"
             android:background="@drawable/btn_primary"
-            android:textColor="@color/textColorPrimary"/>
+            android:text="-"
+            android:textColor="@color/accentColor"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/productQuantityTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1"
-            android:textSize="20sp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:textColor="@color/primaryColor"/>
+            android:background="#00FFFFFF"
+            android:text="1"
+            android:textColor="@color/accentColor"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/increaseQuantityButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+"
-            android:textSize="20sp"
             android:background="@drawable/btn_primary"
-            android:textColor="@color/textColorPrimary"/>
+            android:text="+"
+            android:textColor="@color/accentColor"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </RelativeLayout>

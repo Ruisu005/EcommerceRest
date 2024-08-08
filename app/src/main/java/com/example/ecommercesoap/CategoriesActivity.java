@@ -2,17 +2,13 @@ package com.example.ecommercesoap;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -20,11 +16,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.squareup.picasso.Picasso;
-
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -33,7 +26,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class CategoriesActivity extends AppCompatActivity {
 
-    private static final String BASE_URL = "http://10.0.2.2/ecommerce-api/";
+    private static final String BASE_URL = "https://www.vendemoscomputadoras.com/ecommerce-api/";
     private static final String TAG = "CategoriesActivity";
     private ApiService apiService;
     private RecyclerView recyclerView;

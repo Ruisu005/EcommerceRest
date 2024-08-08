@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundColor"
+    android:background="@drawable/vertical_background"
     android:gravity="center_vertical"
     tools:context=".RegisterActivity">
 
@@ -15,6 +15,7 @@
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
+        android:background="#00FFFFFF"
         android:src="@drawable/logo" />
 
     <EditText
@@ -22,81 +23,87 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
-        android:textColor="@color/inputTextColor"
+        android:textColor="@color/accentColor"
         android:layout_below="@id/logoImageView"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:backgroundTint="@color/primaryColor"/>
+        android:textColorHint="@color/accentColor"
+        android:backgroundTint="@color/accentColor"/>
 
     <EditText
         android:id="@+id/passwordInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:textColor="@color/inputTextColor"
+        android:textColor="@color/accentColor"
         android:inputType="textPassword"
         android:layout_below="@id/emailInput"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:backgroundTint="@color/primaryColor"/>
+        android:textColorHint="@color/accentColor"
+        android:backgroundTint="@color/accentColor"/>
 
     <EditText
         android:id="@+id/firstnameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nombres"
-        android:textColor="@color/inputTextColor"
+        android:textColor="@color/accentColor"
         android:layout_below="@id/passwordInput"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:backgroundTint="@color/primaryColor"/>
+        android:textColorHint="@color/accentColor"
+        android:backgroundTint="@color/accentColor"/>
 
     <EditText
         android:id="@+id/lastnameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Apellidos"
-        android:textColor="@color/inputTextColor"
         android:layout_below="@id/firstnameInput"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="16dp"
-        android:backgroundTint="@color/primaryColor"/>
+        android:textColorHint="@color/accentColor"
+        android:backgroundTint="@color/accentColor"
+        android:hint="Apellidos"
+        android:textColor="@color/accentColor" />
 
     <EditText
         android:id="@+id/addressInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Direccion"
-        android:textColor="@color/inputTextColor"
+        android:textColor="@color/accentColor"
         android:layout_below="@id/lastnameInput"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:backgroundTint="@color/primaryColor"/>
+        android:textColorHint="@color/accentColor"
+        android:backgroundTint="@color/accentColor"/>
 
     <EditText
         android:id="@+id/contactInfoInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Telefono"
-        android:textColor="@color/inputTextColor"
+        android:textColor="@color/accentColor"
         android:layout_below="@id/addressInput"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:backgroundTint="@color/primaryColor"/>
+        android:textColorHint="@color/accentColor"
+        android:backgroundTint="@color/accentColor"/>
 
     <Button
         android:id="@+id/registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/btn_accent"
-        android:text="Register"
-        android:textColor="@color/textColorPrimary"
+        android:text="Registrar"
+        android:textColor="@color/accentColor"
         android:layout_below="@id/contactInfoInput"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"/>

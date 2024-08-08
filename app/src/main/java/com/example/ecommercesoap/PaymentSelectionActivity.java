@@ -62,7 +62,7 @@ public class PaymentSelectionActivity extends AppCompatActivity {
         cvvEditText = findViewById(R.id.cvvEditText);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2/ecommerce-api/")
+                .baseUrl("https://www.vendemoscomputadoras.com/ecommerce-api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
